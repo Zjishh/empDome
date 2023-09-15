@@ -16,7 +16,9 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 public class empApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(empApplication.class, args);
+        System.out.println("zjh0915test1");
     }
 
 }
