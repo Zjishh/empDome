@@ -30,7 +30,7 @@ public class EmpServiceImpl implements EmpService {
 //
 //        //封装bean对象
 //        PageBean pageBean = new PageBean(count,pages);
-//
+//666
 //        return pageBean;
 //    }
     @Override
