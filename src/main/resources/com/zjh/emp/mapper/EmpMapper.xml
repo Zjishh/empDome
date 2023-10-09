@@ -32,10 +32,9 @@
                 dept_id = #{deptId},
             </if>
             <if test="updateTime != null">
+
                 update_time = #{updateTime}
             </if>
-
-
         </set>
         where id = #{id}
     </update>
