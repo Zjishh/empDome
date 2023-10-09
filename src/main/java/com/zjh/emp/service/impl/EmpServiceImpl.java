@@ -4,6 +4,7 @@ package com.zjh.emp.service.impl;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.zjh.emp.mapper.EmpMapper;
+import com.zjh.emp.pojo.Dept;
 import com.zjh.emp.pojo.Emp;
 import com.zjh.emp.pojo.PageBean;
 import com.zjh.emp.service.EmpService;
@@ -61,4 +62,17 @@ public class EmpServiceImpl implements EmpService {
         emp.setUpdateTime(LocalDateTime.now());
         empMapper.insert(emp);
     }
+
+    @Override
+    public Emp getbyid(Integer id) {
+        return empMapper.getbyid(id);
+    }
+
+    @Override
+    public void update(Emp emp) {
+        emp.setUpdateTime(LocalDateTime.now());
+        empMapper.update(emp);
+    }
+
+
 }

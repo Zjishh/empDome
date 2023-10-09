@@ -1,5 +1,6 @@
 package com.zjh.emp.controller;
 
+import com.zjh.emp.pojo.Dept;
 import com.zjh.emp.pojo.Emp;
 import com.zjh.emp.pojo.PageBean;
 import com.zjh.emp.pojo.Result;
@@ -45,10 +46,25 @@ public class EmpController {
         return Result.success();
     }
 
+    @GetMapping("/{id}")
+    public Result list(@PathVariable Integer id){
+        log.info("查询byID"); //使用Slf4j
+        log.info(id.toString());
+        Emp emp= empService.getbyid(id);
+        return Result.success(emp);
+    }
+
     @PostMapping
     public Result save(@RequestBody Emp emp){
         log.info("新建保存员工");
         empService.save(emp);
+        return Result.success();
+    }
+
+    @PutMapping
+    public Result update(@RequestBody Emp emp){
+        log.info("g更新");
+        empService.update(emp);
         return Result.success();
     }
 

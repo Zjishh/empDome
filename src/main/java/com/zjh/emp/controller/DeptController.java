@@ -3,9 +3,9 @@ package com.zjh.emp.controller;
 import com.zjh.emp.pojo.Dept;
 import com.zjh.emp.pojo.Result;
 import com.zjh.emp.service.DeptService;
+import jdk.nashorn.internal.runtime.logging.Logger;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.juli.logging.LogFactory;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -65,4 +65,6 @@ public class DeptController {
         deptService.update(dept);
         return Result.success();
     }
+
+
 }
