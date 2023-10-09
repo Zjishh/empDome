@@ -25,6 +25,8 @@
             <if test="job != null">
                 job = #{job},
             </if>
+
+
             <if test="entrydate != null">
                 entrydate = #{entrydate},
             </if>
