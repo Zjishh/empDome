@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/javaweb2023
+    username: root
+    password: 666666
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+#开启mybatis的驼峰命名自动映射开关 a_column ------> aCloumn
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    use-actual-param-name: true
+
+#阿里云OSS而配置文件
+aliyun:
+  oss:
+    endpoint: https://oss-cn-beijing.aliyuncs.com
+    accessKeyId: LTAI5tHGtxNZRiKzuMhsFbhd
+    accessKeySecret: Iop1plZFRUTDSaKgjoM2rnpxAhEtBl
+    bucketName: empfile
