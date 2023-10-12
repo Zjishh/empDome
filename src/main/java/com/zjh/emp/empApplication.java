@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
 /****************************
  * @project empservice
@@ -14,7 +15,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  * @date 2023/9/15 10:49
  * @Description:   *
  ****************************/
-@SpringBootConfiguration
+@ServletComponentScan
+
 @Slf4j
 @SpringBootApplication
 public class empApplication {
