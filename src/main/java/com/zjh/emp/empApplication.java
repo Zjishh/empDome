@@ -2,6 +2,7 @@ package com.zjh.emp;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
@@ -13,6 +14,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  * @date 2023/9/15 10:49
  * @Description:   *
  ****************************/
+@SpringBootConfiguration
 @Slf4j
 @SpringBootApplication
 public class empApplication {
@@ -43,7 +45,7 @@ public class empApplication {
                 "#            └──┴──┘       └──┴──┘\n" +
                 "#                神兽保佑\n" +
                 "#                代码无BUG!\n"
-               );
+        );
     }
 
 }
