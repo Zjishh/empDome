@@ -8,8 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="empservice" />
+        <module name="ssmtest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ssmtest" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
