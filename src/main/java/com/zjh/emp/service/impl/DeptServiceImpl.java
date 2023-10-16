@@ -4,12 +4,10 @@ import com.zjh.emp.mapper.DeptMapper;
 import com.zjh.emp.mapper.EmpMapper;
 import com.zjh.emp.pojo.Dept;
 import com.zjh.emp.service.DeptService;
-import com.zjh.emp.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.beans.Transient;
 import java.time.LocalDateTime;
 import java.util.List;
 

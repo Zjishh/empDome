@@ -2,7 +2,6 @@ package com.zjh.emp.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
-
 import java.io.IOException;
 
 /****************************
@@ -11,7 +10,7 @@ import java.io.IOException;
  * @className Filter
  * @author Zjiah
  * @date 2023/10/11 18:27
- * @Description:   *
+ * @Description:  配置拦截器 *
  ****************************/
 @WebFilter(urlPatterns = "/login22")
 public class DFilter implements Filter {
