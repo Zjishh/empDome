@@ -1,8 +1,10 @@
 package com.zjh.emp.controller;
 
 import com.zjh.emp.pojo.Dept;
+import com.zjh.emp.pojo.Emp;
 import com.zjh.emp.pojo.Result;
 import com.zjh.emp.service.DeptService;
+import com.zjh.emp.service.EmpService;
 import jdk.nashorn.internal.runtime.logging.Logger;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.juli.logging.LogFactory;
@@ -24,6 +26,7 @@ public class DeptController {
     //注入service的接口
     @Autowired
     private DeptService deptService;
+
 
 //所有
     @GetMapping

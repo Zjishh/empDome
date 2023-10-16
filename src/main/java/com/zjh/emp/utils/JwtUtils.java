@@ -3,14 +3,21 @@ package com.zjh.emp.utils;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.extern.slf4j.Slf4j;
+
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
+@Slf4j
 public class JwtUtils {
 
-    private static String signKey = "itheima";
-    private static Long expire = 43200000L;
+    private static String signKey = "empservice";
+    private static Long expire = 360000L;
 
+    public static void gettime(){
+        log.info("当前令牌过期时间=========》"+expire/3600+"秒");
+    }
     /**
      * 生成JWT令牌
      * @param claims JWT第二部分负载 payload 中存储的内容
