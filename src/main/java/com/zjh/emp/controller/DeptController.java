@@ -22,7 +22,7 @@ public class DeptController {
     @Autowired
     private DeptService deptService;
 
-   //r
+
 //所有
     @GetMapping
     public Result list(){
