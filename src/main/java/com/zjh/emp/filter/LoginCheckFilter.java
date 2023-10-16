@@ -21,26 +21,26 @@ import java.io.IOException;
  * @Description:   *
  ****************************/
 @Slf4j
-@WebFilter(urlPatterns = "/*")
+@WebFilter(urlPatterns = "/666")
 public class LoginCheckFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
         HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
 
-        String url = httpServletRequest.getRequestURI().toString();
+        String url = httpServletRequest.getRequestURI();
 
         if (url.contains("login")) {
             log.info("登录---》放行");
             filterChain.doFilter(servletRequest, servletResponse);
             return;
         }
+
         String token = httpServletRequest.getHeader("token");
         if (!StringUtils.hasLength(token)) {
             log.info("请求头为空 ====》未登录");
             Result error = Result.error("NOT_LOGIN");
             String serrorjson = JSONObject.toJSONString(error);
-
             httpServletResponse.getWriter().write(serrorjson);
             return;
         }
@@ -56,6 +56,8 @@ public class LoginCheckFilter implements Filter {
             return;
         }
 
+        log.info("令牌校验通过");
+        filterChain.doFilter(servletRequest, servletResponse);
 
     }
 }

@@ -4,7 +4,6 @@ package com.zjh.emp.service.impl;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.zjh.emp.mapper.EmpMapper;
-import com.zjh.emp.pojo.Dept;
 import com.zjh.emp.pojo.Emp;
 import com.zjh.emp.pojo.PageBean;
 import com.zjh.emp.service.EmpService;
@@ -19,6 +18,9 @@ import java.util.List;
 public class EmpServiceImpl implements EmpService {
     @Autowired
     private EmpMapper empMapper;
+
+
+
 
     //    @Override
 //    public PageBean page(Integer page, Integer pageSize) {

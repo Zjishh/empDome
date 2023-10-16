@@ -8,11 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="empservice" />
+        <module name="untitled" />
+        <module name="tlias_pojo" />
         <module name="ssmtest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ssmtest" target="1.7" />
+      <module name="tlias_pojo" target="1.5" />
+      <module name="tlias_utils" target="1.5" />
+      <module name="untitled" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

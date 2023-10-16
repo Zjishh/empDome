@@ -1,7 +1,6 @@
 package com.zjh.emp.controller;
 
 
-
 import com.zjh.emp.pojo.Emp;
 import com.zjh.emp.pojo.Result;
 import com.zjh.emp.service.EmpService;
@@ -26,24 +25,27 @@ import java.util.Map;
  ****************************/
 @Slf4j
 @RestController
+@RequestMapping("/login")
+
 public class LoginController {
 
     @Autowired
     private EmpService empService;
 
-    @PostMapping("/login")
+    @PostMapping
     public Result login(@RequestBody Emp emp) {
-        log.info("员工登录"+emp);
+        log.info("员工登录" + emp);
         Emp e = empService.login(emp);
 
-        if (e !=null){
-            Map<String,Object> c = new HashMap<>();
-            c.put("username",emp.getUsername());
-            c.put("id",emp.getId());
-            c.put("name",emp.getName());
+        if (e != null) {
+            Map<String, Object> c = new HashMap<>();
+            c.put("username", emp.getUsername());
+            c.put("id", emp.getId());
+            c.put("name", emp.getName());
             String s = JwtUtils.generateJwt(c);
+            JwtUtils.gettime();
             return Result.success(s);
-        }else{
+        } else {
             return Result.error("用户名或密码错误");
         }
 
